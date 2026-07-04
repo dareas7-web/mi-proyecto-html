@@ -20,9 +20,10 @@
 
 			<div class="imperio-stats">
 				<h3>stats del prospero</h3>
-				<p>clases completadas: <span class="numero">6</span><p>
-				<p>commits hechos:<span class="numero">4</span></p>
-				</p>nivel:<span class="rango">semantico</span></p>
+				<p>clases completadas: <span class="numero" id="num-clases">6</span></p>
+				<p>commits hechos:<span class="numero">5</span></p>
+				<p>nivel:<span class="rango">semantico</span></p>
+				<button id="btn-clase">completar clase +1 </button>
 			</div>
 
 
@@ -32,7 +33,29 @@
 	<footer>
 		<p>Copyright 2022</p>
 	</footer>	
+	<script>
+		const boton = document.getElementById('btn-clase');
+		const numeroClases = document.getElementById('num-clases');
 
+		let contador = localStorage.getItem('clases') || 6;
+		numeroClases.textContent = contador;
+
+		boton.addEventListener('click',function(){
+			contador ++;
+			localStorage.setItem('clases',contador),//
+			
+			numeroClases.textContent = contador;
+
+			//animacion mamalona
+			numeroClases.style.transform = 'scale(1.3)';
+			numeroClases.style.color = '#ffcc00';
+			setTimeout(() => {
+				numeroClases.style.transform = 'scale(1)';
+				numeroClases.style.color = '#ff3366';
+			},200);
+		});
+
+	</script>		
 </body>
 </html>   
   
