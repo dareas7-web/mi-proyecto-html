@@ -1,0 +1,36 @@
+body{
+    background: #0f0f0f;
+    color: white;
+    font-family: Arial,  sans-serif;
+    padding: 20px;
+}
+h1{
+    color: #00ff88;
+    text-align: center;
+}
+.imperio-stats {
+    background: #1a1a1a;
+    border: 2px solid #00ff88;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    max-width: 400px;
+}
+
+.imperio-stats h3 {
+    color: #00ff88;
+    margin-top: 0;
+
+}
+
+.numero {
+    color: #ff3366;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+.rango {
+    color: #ffcc00;
+    font-weight: bold;
+
+}
